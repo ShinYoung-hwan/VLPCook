@@ -265,7 +265,7 @@ You can evaluate your model on the testing set. [boostrap/run.py](https://github
 CUDA_VISIBLE_DEVICES=0 python -m bootstrap.run -o options/vlpcook_clip_finetune.yaml \
 --dataset.batch_size 100 \
 --dataset.dir data_dir/recipe1m  \
---exp.dirlog_dir/exp_name \
+--exp.dir log_dir/exp_name \
 --model.network.path_vocab data_dir/recipe1m/text/vocab_all.txt \
 --model.network.path_ingrs data_dir/recipe1m/text/vocab.pkl \
 --dataset.aux_kw_path.train data_dir/recipe1m/context_annotation/layer1_train_titles_kw.json \
