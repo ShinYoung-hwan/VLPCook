@@ -1,7 +1,8 @@
 test:
+	export USER=$(whoami)
 	python -m bootstrap.run -o recipe1m/options/useful/vlpcook_clip_finetune.yaml \
 		--dataset.batch_size 100 \
-		--dataset.dir data_dir/recipe1m  \
+		--dataset.dir ../data/recipe1m  \
 		--exp.dir log_dir/exp_name \
 		--model.network.path_vocab data_dir/recipe1m/text/vocab_all.txt \
 		--model.network.path_ingrs data_dir/recipe1m/text/vocab.pkl \

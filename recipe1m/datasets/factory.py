@@ -104,7 +104,7 @@ def factory_recipe1m(split):
 
 
     if use_vcs:
-        tokenizer = BertTokenizer.from_pretrained('bert-base-uncased', local_files_only=True)
+        tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
     else:
         tokenizer = None
 
