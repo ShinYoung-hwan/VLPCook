@@ -1,19 +1,18 @@
 test:
-	export USER=$(whoami)
 	python -m bootstrap.run -o recipe1m/options/useful/vlpcook_clip_finetune.yaml \
 		--dataset.batch_size 100 \
 		--dataset.dir ../data/recipe1m  \
 		--exp.dir log_dir/exp_name \
-		--model.network.path_vocab data_dir/recipe1m/text/vocab_all.txt \
-		--model.network.path_ingrs data_dir/recipe1m/text/vocab.pkl \
-		--dataset.aux_kw_path.train data_dir/recipe1m/context_annotation/layer1_train_titles_kw.json \
-		--dataset.aux_kw_path.test data_dir/recipe1m/context_annotation/layer1_test_titles_kw.json \
-		--dataset.aux_kw_path.val data_dir/recipe1m/context_annotation/layer1_val_titles_kw.json \
+		--model.network.path_vocab ../data/recipe1m/text/vocab_all.txt \
+		--model.network.path_ingrs ../data/recipe1m/text/vocab.pkl \
+		--dataset.aux_kw_path.train ../data/recipe1m/context_annotation/layer1_train_titles_kw.json \
+		--dataset.aux_kw_path.test ../data/recipe1m/context_annotation/layer1_test_titles_kw.json \
+		--dataset.aux_kw_path.val ../data/recipe1m/context_annotation/layer1_val_titles_kw.json \
 		--model.network.bert_config ~/vlpcook/recipe1m/models/networks/recipe_networks/config_bert_albef.json \
 		--dataset.randkw_p 0.3 \
-		--dataset.kw_path.train data_dir/recipe1m/context_annotation/layer1_train_ingr_kw.json \
-		--dataset.kw_path.test data_dir/recipe1m/context_annotation/layer1_test_ingr_kw.json \
-		--dataset.kw_path.val data_dir/recipe1m/context_annotation/layer1_val_ingr_kw.json \
+		--dataset.kw_path.train ../data/recipe1m/context_annotation/layer1_train_ingr_kw.json \
+		--dataset.kw_path.test ../data/recipe1m/context_annotation/layer1_test_ingr_kw.json \
+		--dataset.kw_path.val ../data/recipe1m/context_annotation/layer1_val_ingr_kw.json \
 		--dataset.randkw_p_aux 0.5 \
 		--dataset.eval_split test \
 		--dataset.train_split \
